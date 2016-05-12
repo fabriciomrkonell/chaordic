@@ -7,6 +7,7 @@ var express = require('express'),
     router_urls = require('./routes/urls'),
     router_users = require('./routes/users'),
     router_stats = require('./routes/stats'),
+    mongoose = require('./config/database'),
     app = express();
 
 app.use(bodyParser.json());
