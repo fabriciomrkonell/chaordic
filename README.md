@@ -15,6 +15,14 @@ Esta aplicação tem como pré-requisito:
 * MondoDB (A instalação está no arquivo install.sh)
 * Mocha (Necessário para os testes)
 
+IMPORTANTE: Para os procedimentos de Instalação e Execução, é necessário estar localizado na pasta raiz do projeto (é necessário devido a instalação dos pacotes NPM, e para o inicialização da aplicação).
+
+Entre no diretório do projeto:
+
+```
+cd /chaordic
+```
+
 
 ### Instalação
 
@@ -24,22 +32,25 @@ Para instalar, execute o arquivo (necessário permissão)
 ./install.sh
 ```
 
+Este procedimento irá fazer o download do Node.js, MongoDB, NPM, dependências da aplicação e do Mocha.
+
 
 ### Execução
 
-Para executar, execute o arquivo (necessário permissão)
+Para iniciar, execute o arquivo (necessário permissão)
 
 ```
 ./init.sh
 ```
 
+Este procedimento irá iniciar a aplicação.
+
 
 ## Inicializão
 
-Por padrão a aplicação utiliza as portas:
+Por padrão a aplicação utiliza a porta 3000 para o Node.js.
 
-* 3000 para o Node.js
-* 27017 para o MongoDB
+Para alterar as porta da aplicação, é necessário alterar o arquivo de configuração config.js, localizado no diretório config.
 
 
 ## Testes
