@@ -19,7 +19,6 @@ router.get('/:id', function(req, res, next) {
   	}
   	res.send(data);
  	}).catch(function(err){
- 		console.log(err);
     res.status(codes.BADREQUEST_CODE).send();
   });
 });
