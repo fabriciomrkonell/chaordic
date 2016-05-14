@@ -8,15 +8,20 @@ var express = require('express'),
     service = require('../services/service');
 
 router.post('/', function(req, res, next){
-  var user = new User();
-	user.id = req.body.id;
-  var promisse = user.save();
-  promisse.then(function(data) {
-    res.status(codes.CREATED_CODE);
-    res.send({ id: data.id });
-  }).catch(function(err){
-    res.status(codes.CONFLICT_CODE).send();
-  });
+  var id = req.body.id;
+  if(id === undefined){
+    res.status(codes.BADREQUEST_CODE).send();
+  }else{
+    var user = new User();
+    user.id = id;
+    var promisse = user.save();
+    promisse.then(function(data) {
+      res.status(codes.CREATED_CODE);
+      res.send({ id: data.id });
+    }).catch(function(err){
+      res.status(codes.CONFLICT_CODE).send();
+    });
+  }
 });
 
 router.post('/:userid/urls', function(req, res, next){

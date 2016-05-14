@@ -26,6 +26,7 @@ module.exports = {
 	  		res.status(codes.NOTFOUND_CODE).send();
 	  	}
 	 	}).then(function(data) {
+	 		console.log(data);
 	 		if(data){
 	 			return Urls.find(data.filter).exec().then(function(urls){
 		    	data.hits = 0;

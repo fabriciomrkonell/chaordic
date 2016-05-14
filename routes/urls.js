@@ -13,9 +13,11 @@ router.get('/:id', function(req, res, next) {
     if(!url){
       res.status(codes.NOTFOUND_CODE).send();
     }else{
-      url.hits = url.hits + 1;
-      url.save();
-      res.redirect(codes.REDIRECT_CODE, url.url);
+      url.hits = parseInt(url.hits + 1);
+      url.save(function(err, url){
+        console.log(url);
+        res.redirect(codes.REDIRECT_CODE, url.url);
+      });
     }
   }).catch(function(err){
     res.status(codes.BADREQUEST_CODE).send();
