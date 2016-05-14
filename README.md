@@ -5,7 +5,7 @@ Projeto teste de um encurtador de URL.
 
 ## Iniciando
 
-A aplicação foi desenvolvida em Node.js. Ela é composta por diretórios de rotas, serviços, modelos e configurações. No diretório rotas está descrito todos os Endpoints disponíveis. Em modelos é possivel identificar as duas entidades da aplicação, são elas: Urls e Users. O relacionamento delas é a seguinte, uma Url pertence a um User, e um User tem um conjunto de Url. No diretório serviços, está disponível a função para gerar uma Url aleatória e a pesquisa do endpoint "stats", tanto geral como para um usuário específico. Em configuração estão os arquivos do banco de dados e os códigos.
+A aplicação foi desenvolvida em Node.js. Ela é composta por diretórios de `rotas`, `serviços`, `modelos` e `configurações`. No diretório `rotas` está descrito todos os Endpoints disponíveis. Em `modelos` é possivel identificar as duas entidades da aplicação, são elas: Urls e Users. O relacionamento delas é a seguinte, uma Url pertence a um User, e um User tem um conjunto de Url. No diretório `serviços`, está disponível a função para gerar uma Url aleatória e a pesquisa do endpoint "stats", tanto geral como para um usuário específico. Em `configuração` estão os arquivos do banco de dados e os códigos.
 
 
 ### Pré-Requisitos
@@ -20,7 +20,7 @@ IMPORTANTE: Para os procedimentos de Instalação e Execução, é necessário e
 Entre no diretório do projeto:
 
 ```
-cd /chaordic
+cd chaordic
 ```
 
 
@@ -50,7 +50,7 @@ Este procedimento irá iniciar a aplicação.
 
 Por padrão a aplicação utiliza a porta 3000 para o Node.js.
 
-Para alterar as porta da aplicação, é necessário alterar o arquivo de configuração config.js, localizado no diretório config.
+Para alterar as porta da aplicação, é necessário alterar o arquivo de configuração `config.js`, localizado no diretório `config`.
 
 
 ## Testes
