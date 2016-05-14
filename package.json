@@ -12,6 +12,9 @@
     "express": "4.13.4",
     "cookie-parser": "1.4.1",
     "body-parser": "1.15.0",
-    "mongoose": "4.4.10"
+    "mongoose": "4.4.10",
+    "should": "8.3.1",
+    "chai": "3.5.0",
+    "supertest": "1.2.0"
   }
 }

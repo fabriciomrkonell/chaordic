@@ -27,8 +27,8 @@ router.post('/:userid/urls', function(req, res, next){
     if(user){
       var urls = new Urls();
       urls.hits = 0;
-      urls.url = 'www.google.com';
-      urls.shortUrl = 'http://short.url.com/teste';
+      urls.url = req.body.url;
+      urls.shortUrl = 'http://shor.io/' + service.generateRandom();
       urls.userId = user;
       return urls.save().then(function(url){
         return url;

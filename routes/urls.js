@@ -14,7 +14,6 @@ router.get('/:id', function(req, res, next) {
       res.status(codes.NOTFOUND_CODE).send();
     }else{
       url.hits = url.hits + 1;
-      console.log(url)
       url.save();
       res.redirect(codes.REDIRECT_CODE, url.url);
     }

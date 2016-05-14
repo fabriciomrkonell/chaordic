@@ -5,6 +5,9 @@ var codes = require('../config/codes'),
 		Urls = require('../models/urls');
 
 module.exports = {
+	generateRandom: function(){
+		return Math.random().toString(24).substring(5);
+	},
 	stats: function(req, res, next) {
 		var userParam = req.param('userId');
 		var promisse = Users.findOne({
