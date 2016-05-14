@@ -4,7 +4,8 @@ var express = require('express'),
 		router = express.Router(),
 		codes = require('../config/codes'),
 		User = require('../models/users'),
-    Urls = require('../models/urls');
+    Urls = require('../models/urls'),
+    service = require('../services/service');
 
 router.post('/', function(req, res, next){
   var user = new User();
@@ -40,12 +41,15 @@ router.post('/:userid/urls', function(req, res, next){
     res.send({
       id: url.id,
       hits: url.hits,
-      url: url.url
+      url: url.url,
+      shortUrl: url.shortUrl
     });
   }).catch(function(err){
     res.status(codes.CONFLICT_CODE).send();
   });
 });
+
+router.get('/:userId/stats', service.stats);
 
 router.delete('/:userId', function(req, res, next){
   var promisse = User.remove({

@@ -8,12 +8,14 @@ var Urls = mongoose.model('Urls', new Schema({
   url: { type: String },
   shortUrl: { type: String },
   hits: { type: Number },
-  userId: { type: Schema.Types.ObjectId, ref: 'User' }
+  userId: { type: Schema.Types.ObjectId, ref: 'User' },
+  aggregate: { type: Boolean, default: true }
 }).pre('save', function(next) {
 	var doc = this;
-  this.constructor.count().exec(function(err, count) {
+  this.constructor.findOne().sort('-id').exec(function(err, count) {
+  	count = parseInt((count && count.id) || 0) + 1;
 	  if(err) return next(err);
-	  doc.id = count++;
+	  doc.id = count;
 	  next();
   });
 }));

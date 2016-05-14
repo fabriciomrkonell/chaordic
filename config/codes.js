@@ -1,5 +1,7 @@
 'use strict';
 
+exports.OK_CODE = 200;
+
 exports.CREATED_CODE = 201;
 
 exports.NOTCONTENT_CODE = 204;
