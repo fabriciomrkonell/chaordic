@@ -22,4 +22,17 @@ router.get('/:id', function(req, res, next) {
   });
 });
 
+router.delete('/:id', function(req, res, next){
+  var promisse = Url.remove({
+    id: req.param('id')
+  }).exec();
+  promisse.then(function(data) {
+    res.status(codes.NOTCONTENT_CODE)
+    if(data.result.n === 0) res.status(codes.NOTFOUND_CODE);
+    res.send();
+  }).catch(function(err){
+    res.status(codes.BADREQUEST_CODE).send();
+  });
+});
+
 module.exports = router;
