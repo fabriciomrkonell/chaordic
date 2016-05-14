@@ -29,7 +29,7 @@ cd chaordic
 Para instalar, execute o arquivo (necessário permissão)
 
 ```
-./install.sh
+./start.sh
 ```
 
 Este procedimento irá fazer o download do Node.js, MongoDB, NPM, dependências da aplicação e do Mocha.
