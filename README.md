@@ -29,7 +29,7 @@ cd chaordic
 Para instalar, execute o arquivo (necessário permissão)
 
 ```
-./start.sh
+./install.sh
 ```
 
 Este procedimento irá fazer o download do Node.js, MongoDB, NPM, dependências da aplicação e do Mocha.
@@ -40,7 +40,7 @@ Este procedimento irá fazer o download do Node.js, MongoDB, NPM, dependências 
 Para iniciar, execute o arquivo (necessário permissão)
 
 ```
-./init.sh
+./start.sh
 ```
 
 Este procedimento irá iniciar a aplicação.
